@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <style>
+        body{
+            background-image: url("img/1.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .inner{
+            width: 1200px;
+            height:600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #canvas{
+            border:1px solid #000000;
+            position: absolute;
+            right:0;
+            left:0;
+            bottom:-30px;
+            top:0;
+            margin: auto;
+            background: #af6103;
+            box-shadow: 5px 5px 10px #d2d2d2;
+        }
+        .restart,.back,.box,.time1,.time2,.djs,.music{
+            width: 150px;
+            height:70px;
+            background: url("img/btn.png")no-repeat;
+            text-align: center;
+            line-height: 70px;
+            cursor: pointer;
+            color: #fff;
+        }
+        .restart{
+            position: absolute;
+            left: 30px;
+            top:120px;
+        }
+        .box{
+            position: absolute;
+            left: 30px;
+            top:240px;
+        }
+        .active{
+            background: url("img/renji.png")no-repeat center;
+            color: #000;
+        }
+        .music{
+            position:absolute;
+            left: 30px;
+            top:360px;
+        }
+        .time1{
+            position: absolute;
+            right: 30px;
+            top:120px;
+        }
+        .time2{
+            position: absolute;
+            right: 30px;
+            top:380px;
+        }
+        .djs{
+            position: absolute;
+            right: 30px;
+            top:250px;
+          }
+        .t1{
+            background: url("img/a.png")no-repeat center;
+            color: #fff;
+        }
+        .vol{
+            width: 250px;
+            height:80px;
+            position:absolute;
+            left:-10px;
+            top:450px;
+            z-index:20;
+            background: url("img/m.png") no-repeat;
+            /*opacity: 0;*/
+            display: none;
+        }
+        .volume{
+            background: url("img/vol.png");
+            width: 80px;
+            height:80px;
+            margin-left:8px;
+            z-index:30;
+            float: left;
+        }
+        .jinyin{
+            background: url("img/novol.png") no-repeat center;
+        }
+        .voltiao {
+            width: 130px;
+            height: 8px;
+            position: absolute;
+            background: #fff;
+            margin:35px 0 0 80px;
+            border-radius: 3px;
+            z-index:40;
+            float: right;
+        }
+        .yuan{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #d88106;
+            float: left;
+            top:-1px;
+            position: absolute;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body>
+<audio src="music.mp3"></audio>
+<div class="inner">
+        <div class="vol">
+            <div class="volume"></div>
+            <div class="voltiao">
+                <div class="yuan"></div>
+            </div>
+        </div>
+    <div class="restart">重新开始</div>
+    <div class="box">人机对战</div>
+    <div class="music">音乐</div>
+    <div class="time1">黑方</div>
+    <div class="djs">00:<span>30</span></div>
+    <div class="time2">白方</div>
+    <canvas width="600px" height="600px" id="canvas"></canvas>
+</div>
+</body>
+</html>
